@@ -37,6 +37,7 @@ void init_GPIO()
   // GPIO Port 0, Pin 9
   IOCON->PIO[0][9] = 0;
   GPIO->DIRSET[0] = (1UL << 9);
+  IOCON->PIO[0][9] = IOCON_PIO_DIGIMODE(1);
 }
 
 void init_TIMER()
